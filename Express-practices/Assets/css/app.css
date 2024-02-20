@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.register{
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.register input[type=text], .register input[type=password],.register textarea{
+    width: 280px;
+    padding: 7px 12px;
+}
+
+.register select{
+    width: 305px;
+    padding: 7px 12px;
+}
+
+.register form{
+    background-color: rgba(151, 151, 151, 0.384);
+    padding: 20px 30px 50px 30px;
+    border-radius: 5px;
+    
+}
+
+.register button{
+    position: absolute;
+    left:47%;
+    padding: 7px 16px;
+    cursor: pointer;
+}
+
+.register h5{
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+

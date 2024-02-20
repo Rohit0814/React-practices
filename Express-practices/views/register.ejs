@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= locals.title %>   </title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="register">
+    <form method="post" action="<% if(form_name=='Registration'){ %>/create-user <% }else if(form_name=='Updation'){ %> /update/?id=<%= temp_data[0].id %> <% }%>">
+        <h5><%= form_name %></h5>
+        <input type="text" name="email" placeholder="Enter Your Email" value="<%= temp_data[0].email %>"><br><br>
+        <input type="text" name="name" placeholder="Enter Your Name" value="<%= temp_data[0].name %>"><br><br>
+        <input type="password" name="password" placeholder="Enter password" value="<%= temp_data[0].password %>"><br><br>
+        <input type="radio" name="gen" value="Male" <% if(temp_data[0].gen=='Male'){ %> checked <% } %>> Male &nbsp;&nbsp;
+        <input type="radio" name="gen" value="Female" <% if(temp_data[0].gen=='Female'){ %> checked <% } %>> Female &nbsp;&nbsp;
+        <input type="radio" name="gen" value="Other" <% if(temp_data[0].gen=='Other'){ %> checked <% } %>> Other<br><br>
+        <input type="checkbox" name="lgn" value="English"> English &nbsp;&nbsp;
+        <input type="checkbox" name="lgn" value="Hindi"> Hindi &nbsp;&nbsp;
+        <input type="checkbox" name="lgn" value="Tamil"> Tamil &nbsp;&nbsp;
+        <input type="checkbox" name="lgn" value="Bhojpuri"> Bhojpuri &nbsp;&nbsp;<br><br>
+        <textarea placeholder="Address" name="address"><%= temp_data[0].address %></textarea><br><br>
+        <select name="course">
+            <option>Select Course</option>
+            <optgroup label="Basic">
+                <option value="DCA">DCA</option>
+                <option value="ADCA">ADCA</option>
+                <option value="Tally">Tally</option>
+            </optgroup>
+            <optgroup label="programming">
+                <option value="c/c++">C/C++</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="ruby">Ruby</option>
+                <option value="r">R</option>
+            </optgroup>
+            <optgroup label="Web development">
+                <option value="html/css/js">HTML/CSS/JS</option>
+                <option value="Laravel">Laravel</option>
+                <option value="MERN">MERN</option>
+                <option value="MEAN">MEAN</option>
+            </optgroup>
+        </select><br><br>
+        <button type="submit"><%= btn_name %></button>
+    </form>
+</div>
+</body>
+</html>
