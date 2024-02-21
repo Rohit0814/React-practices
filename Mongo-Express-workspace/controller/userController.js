@@ -17,3 +17,16 @@ module.exports.dataSave=(req,res)=>{
         return;
     });
 }
+
+module.exports.loadData=(req,res)=>{
+    User.find({}).then(users => {
+        console.log(users);
+        return res.render('display',{
+            user:users
+        });
+    }).catch(err=>{
+        console.log('error.... ',err);
+        return;
+    })
+    
+}
