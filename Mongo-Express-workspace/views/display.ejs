@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .user-list{
+            margin-left: 23%;
+            margin-top: 2%;
+        }
+    </style>
 </head>
 <body>
-    <h1>All Users</h1>
-    <% for(let i of user){ %>
+    <div class="header">
+        <div>
+        <h1>All Users</h1>
+    </div>
+    <div>
+        <form method="post" action="/users/search">
+        <select name="search_based">
+            <% if(searchbased===''){ %>
+            <option>Search based on</option>
+            <% }else{ %>
+            <option><%= searchbased %></option>
+            <% } %>
+            <option value="name">Name</option>
+            <option value="email">Email</option>
+            <option value="course">Course</option>
+        </select>
+        <input type="text" placeholder="search" name="title" value="<%= title %>">
+        <button type="submit">Search</button>
+        </form>
+    </div> 
+    </div>
+    
+    <div class="user-list">
+    <% for(let i of user){ 
+        if(i!=={}){  
+        %>
         <details>
             <summary>User Id:- <%= i._id %> </summary>
         <ul>
@@ -16,7 +51,10 @@
             <li><%= i.course %></li>
         </ul>
     </details><br>
-        <% } %>
+        <% }else{ %>
+            <h1>There is No search Result</h1>
+        <% }} %>
+    </div>
     
 </body>
 </html>
