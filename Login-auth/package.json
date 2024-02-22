@@ -1,0 +1,17 @@
+{
+  "name": "login-auth",
+  "version": "1.0.0",
+  "description": "This is only practice for login auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Rohit Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.3"
+  },
+  "tailwind:css": "postcss assets/styles/tailwind.css -o assets/styles/style.css"
+}
