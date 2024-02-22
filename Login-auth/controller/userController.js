@@ -45,5 +45,19 @@ module.exports.save_user = (req,res) =>{
 
 
 module.exports.auth_user =(req,res) => {
+    User.findOne({email:req.body.email}).then(user =>{
+        console.log(user);
+        if(user.password!=req.body.password){
+            return res.status(400).send('Password Not Matched');
+        }
+        res.cookie('user_id',user.id);
+        return res.redirect('/users/dashboard');
+    }).catch(err=>{
+        console.log('Error in finding user:', err);
+        return res.status(500).send('Internal Server Error');
+    });
+}
+
+module.exports.dashboard =(req,res)=>{
     return res.render('dashboard');
 }
