@@ -1,7 +1,9 @@
 const db=require('../config/moongoes');
-const User=require('../model/authUserSchema')
+const User=require('../model/authUserSchema');
+
 
 module.exports.home = (req,res)=> {
+    console.log(req.cookies);
     return res.render('home');
 }
 
