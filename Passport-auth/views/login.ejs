@@ -9,20 +9,20 @@
 <body>
     <h1 style="text-align: center;">Login</h1>
     <div class="container">
-      <form action="/users/login" method="post">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
-      </div>
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label">password</label>
-        <input type="password" class="form-control" id="exampleFormControlInput1" name="password">
-      </div>
-      <center>
-      <button class="btn btn-primary" type="submit">Login</button><br><br>
-      <a href="/" class="btn btn-warning">Home</a>
-    </center>
-  </form>
+      <form action="/users/create-session" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" name="password">
+        </div>
+        <center>
+            <button class="btn btn-primary" type="submit">Login</button><br><br>
+            <a href="/" class="btn btn-warning">Home</a>
+        </center>
+    </form>
     </div>
 </body>
 </html>
