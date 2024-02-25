@@ -60,3 +60,14 @@ module.exports.dashboard = (req,res) => {
 module.exports.create_session = (req,res) =>{
     return res.redirect('/users/dashboard');
 }
+
+
+module.exports.logout = (req,res,next) => {
+    req.logout(function(err){
+        if(err){
+            console.log('there is an error: ',err);
+            return next();
+        }
+        return res.redirect('/');
+    });
+}
