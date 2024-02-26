@@ -1,5 +1,6 @@
 import { IoIosHome } from "react-icons/io";
 import { MdArticle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return <>
@@ -11,8 +12,8 @@ const Header = () => {
         </a>
 
         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" className="nav-link text-white" style={{ fontSize:'30px' }}><IoIosHome /></a></li>
-          <li><a href="#" className="nav-link text-white" style={{ fontSize:'30px' }}><MdArticle /></a></li>
+          <li><Link to="/" className="nav-link text-white" style={{ fontSize:'30px' }}><IoIosHome /></Link></li>
+          <li><Link to="/post" className="nav-link text-white" style={{ fontSize:'30px' }}><MdArticle /></Link></li>
         </ul>
       </div>
     </div>

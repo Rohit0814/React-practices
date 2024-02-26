@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-    <div class="register">
+    <div className="register">
     <form method="post" action="<% if(form_name=='Registration'){ %>/create-user <% }else if(form_name=='Updation'){ %> /update/?id=<%= temp_data[0].id %> <% }%>">
         <h5><%= form_name %></h5>
         <input type="text" name="email" placeholder="Enter Your Email" value="<%= temp_data[0].email %>"><br><br>

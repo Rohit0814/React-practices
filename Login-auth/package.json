@@ -1,7 +1,7 @@
 {
   "name": "login-auth",
   "version": "1.0.0",
-  "description": "This is only for Login auth practices",
+  "description": "This is only htmlFor Login auth practices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

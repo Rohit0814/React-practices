@@ -1,7 +1,7 @@
 {
   "name": "express-practices",
   "version": "1.0.0",
-  "description": "This is only for basic express js practices",
+  "description": "This is only htmlFor basic express js practices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

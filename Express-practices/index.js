@@ -43,7 +43,7 @@ app.get('/update',function(req,res){
         language: "",
         course: "",
     }];
-    for(let i of data){
+    htmlFor(let i of data){
         if(i.id==temp_id){
             temp_data=[{
                 id:i.id,

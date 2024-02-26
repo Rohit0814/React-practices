@@ -12,34 +12,34 @@
     <% if(locals.message){ %>
         <%= message %>
     <% } %>
-    <div class="container">
+    <div className="container">
         <form action="/users/data-save" method="post">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+    <div className="mb-3">
+        <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
+        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
       </div>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">UserName</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="UserName" name="username">
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlInput1" className="form-label">UserName</label>
+        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="UserName" name="username">
       </div>
-      <div class="d-flex">
-      <div class="mb-3 w-50 px-2">
-        <label for="exampleFormControlInput1" class="form-label">password</label>
-        <input type="password" class="form-control" id="exampleFormControlInput1" name="password">
+      <div className="d-flex">
+      <div className="mb-3 w-50 px-2">
+        <label htmlFor="exampleFormControlInput1" className="form-label">password</label>
+        <input type="password" className="form-control" id="exampleFormControlInput1" name="password">
       </div>
-      <div class="mb-3 w-50 px-2">
-        <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" id="exampleFormControlInput1" name="confirm_password">
+      <div className="mb-3 w-50 px-2">
+        <label htmlFor="exampleFormControlInput1" className="form-label">Confirm Password</label>
+        <input type="password" className="form-control" id="exampleFormControlInput1" name="confirm_password">
       </div>
     </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">Address</label>
+        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name="address"></textarea>
       </div>
       <center>
-      <button class="btn btn-primary" type="submit">Register</button>
+      <button className="btn btn-primary" type="submit">Register</button>
       <br><br>
-      <a href="/" class="btn btn-warning">Home</a>
+      <a href="/" className="btn btn-warning">Home</a>
     </center>
 </form>
     </div>
