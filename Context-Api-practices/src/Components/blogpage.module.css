@@ -1,33 +1,4 @@
 .heading{
-    width:100%;
-    margin-bottom: 30px;
-    font-size: 25px;
-    padding: 5px 20px;
-    border: none;
-    border-bottom: 2px solid black;
-    background: #f8f9fa;
-    font-weight: bolder;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    outline: 2px;
-}
-
-.heading:focus{
-    border: none;
-    border-bottom: 3px solid red;
-    outline: none;
-}
-
-.title{
-    width: 100%;
-    margin-bottom: 20px;
-    height: 500px;
-    padding: 30px 30px;
-    resize: none;
-    font-size: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.title:focus{
-    border: 3px solid red;
-    outline: none;
+    padding: 10px 20px;
+    width: 50%;
 }
