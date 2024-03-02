@@ -1,35 +1,18 @@
+import { useContext } from "react";
+import {List} from '../store/ListContext'
 import Post from "./Post";
+
 
 const PostList = () => {
 
-    const postList = [
-        {
-            id:1,
-            heading: "Navbar example",
-            title: "This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport."
-        },
-        {
-            id:2,
-            heading: "Navbar example",
-            title: "This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport."
-        },
-        {
-            id:3,
-            heading: "Navbar example",
-            title: "This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport."
-        }
-    ]
-
+    const {listItem} = useContext(List);
     return <>
         <main className="container">
 
-            {postList.map(data => (
-                <Post key={data.id} heading={data.heading} title={data.title}/>
+            {listItem.map(data => (
+                <Post key={data.id} title={data.title} content={data.content} />
             ))}
-            
-            {/* <Post heading = "Navbar example" title="This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport."/>
-            <Post heading = "Navbar example" title="This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport."/> */}
-</main>
+        </main>
     </>
 }
 
