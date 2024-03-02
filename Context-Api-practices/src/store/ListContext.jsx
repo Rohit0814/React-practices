@@ -12,6 +12,9 @@ const ListReducer = (currPostList, action) =>{
         
         newPost = [...currPostList,action.payload.postWithId];
     }
+    if(action.type == 'delete'){
+        newPost = currPostList.filter(post => post.id != action.payload.id);
+    }
     return newPost;
 }
 
@@ -23,8 +26,8 @@ const ListProvider = ({children}) => {
         dispatchList({type:'add', payload: {postWithId}})
     }
 
-    const deletePost = () => {
-
+    const deletePost = (id) => {
+        dispatchList({type:'delete' , payload: {id}});
     }
 
     return <List.Provider value={{ 
