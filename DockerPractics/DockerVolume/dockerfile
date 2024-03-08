@@ -1,0 +1,9 @@
+FROM python
+
+WORKDIR /DockerVolume
+
+COPY ./myapp.py .
+
+COPY ./server.txt .
+
+CMD ["python","myapp.py"]
