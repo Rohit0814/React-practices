@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import style from './Header.module.css'
 
 const Header = () =>{
@@ -7,11 +8,11 @@ const Header = () =>{
                 <div className={style.left_navbar}>
                     <span>Company Name</span>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>PortFolio</li>
-                    <li>Services</li>
+                    <Link to='/'><li>Home</li></Link>
+                    <Link to='/about'><li>About</li></Link>
+                    <Link to='/contact'><li>Contact</li></Link>
+                    <Link to='/portfolio'><li>PortFolio</li></Link>
+                    <Link to='/services'><li>Services</li></Link>
                 </ul>
                 </div>
                 <div className={style.right_navbar}>
